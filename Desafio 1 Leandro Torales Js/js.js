@@ -34,7 +34,7 @@ const hayPizzaDeMenosDe600$ = pizzas.some((element) => element.Precio < 600);
 console.log("Ejercicio B:", `Hay Pizzas que valgan menos de 600$: Si, hay (${hayPizzaDeMenosDe600$})`);
 
 //c) El nombre de cada pizza con su respectivo precio.
-//Solucion 1: Se pushea los nuevos strings con los nombres y los precios por cada objeto con el foreach hacia el array vacio, luego se le hace return para que devuelva el valor
+//Con el foreach recorre cada elemento del array y se le pone el console.log para que genere un console log por cada elemento que recorre
 const pizzaNombreYPRecio = (element) => {
   element.forEach((element) => {
     console.log("Ejercicio C:", `El nombre de la pizza es: ${element.nombre}, y su precio es de ${element.Precio}`);
