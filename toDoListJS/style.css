@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+  list-style: none;
+}
+:root {
+  --color-backround-main: grey;
+}
+
+body {
+  background-color: var(--color-backround-main);
+}
+
+.container-section {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 5%;
+  margin-top: 25px;
+}
+
+h1 {
+  font-size: 35px;
+  color: black;
+  text-decoration: underline;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+.container__ingresarTarea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(89 88 88);
+  width: 500px;
+  height: 60px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+  fill: white;
+}
+
+.container__ingresarTarea input {
+  outline: none;
+  border: none;
+  width: 90%;
+  height: 70%;
+  font-size: 18px;
+  color: white;
+  background: none;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.button__agregar {
+  font-size: 18px;
+  background: linear-gradient(90deg, rgba(255, 217, 0, 1) 17%, rgba(148, 172, 0, 1) 100%);
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 60px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.tasks__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.tasks__list li {
+  width: 500px;
+  height: 60px;
+  background-color: rgb(89 88 88);
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 25px;
+  padding-right: 10px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.button__borrarTareas {
+  background: linear-gradient(180deg, rgba(255, 217, 0, 1) 17%, rgba(148, 172, 0, 1) 100%);
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  width: 500px;
+  height: 60px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.hidden {
+  display: none;
+}
