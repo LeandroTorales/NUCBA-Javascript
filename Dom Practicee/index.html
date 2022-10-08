@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Practice Dom</title>
+  </head>
+  <body>
+    <section class="container-section">
+      <h1>Validación de inputs</h1>
+      <form id="form" novalidate>
+        <div class="container__input">
+          <input type="text" name="input nombre" id="input__name" placeholder="Tu nombre" />
+          <small></small>
+        </div>
+        <div class="container__email">
+          <input type="email" name="input email" id="input__email" placeholder="Tu email" />
+          <small></small>
+        </div>
+        <div class="container__phone">
+          <input type="number" name="input phone number" id="input__phone" placeholder="Tu celular" />
+          <small></small>
+        </div>
+      </form>
+    </section>
+    <script src="./appUtils.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
