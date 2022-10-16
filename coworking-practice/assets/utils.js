@@ -48,18 +48,18 @@ console.log(isEmpty(""));
 
 // MANEJO DE ERRORES
 const showError = (input, message) => {
-  const formField = input.parenElement;
+  const formField = input.parentElement;
   formField.classList.add("error");
   const error = formField.querySelector("small");
   error.textContent = message;
 };
 
 const clearError = (input) => {
-  const formField = input.parenElement;
+  const formField = input.parentElement;
   formField.classList.remove("error");
   const error = formField.querySelector("small");
   error.textContent = "";
-};
+}; 
 
 // FUNCIONES UTILES PARA TRABAJAR CON LAS PROPIEDADES DEL OBJETO 'agenda'
 

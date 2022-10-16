@@ -10,9 +10,9 @@ const aboutInput = document.getElementById("message");
 
 const checkTextInput = (input) => {
   let valid = false;
-  const Content = input.value.trim();
+  const content = input.value.trim();
 
-  if (isEmpty(Content)) {
+  if (isEmpty(content)) {
     showError(input, "* El campo es obligatorio");
   } else {
     clearError(input);
@@ -24,16 +24,18 @@ const checkTextInput = (input) => {
 const checkEmail = () => {
   let valid = false;
   const emailValue = emailInput.value.trim();
+
   if (isEmpty(emailValue)) {
-    showError(emailValue, "*El email es obligatorio");
+    showError(emailInput, "El email es obligatorio");
   } else if (!isEmailValid(emailValue)) {
-    showError(emailValue, "*El email ingresado no es correcto");
+    showError(emailInput, "El email no es valido");
   } else {
-    clearError(emailValue);
+    clearError(emailInput);
     valid = true;
   }
   return valid;
 };
+
 
 const checkPhone = () => {
   let valid = false;

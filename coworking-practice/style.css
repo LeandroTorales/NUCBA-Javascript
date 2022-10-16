@@ -87,6 +87,10 @@ body {
   gap: 20px;
 }
 
+/* small {
+  color: var(--error);
+} */
+
 .form__field {
   display: flex;
   flex-direction: column;
