@@ -18,8 +18,8 @@
           <form id="form" novalidate>
             <div class="container__field">
               <div class="form__field">
-                <input type="number" name="number" id="input__number" placeholder="Ingresa un numero del 1 al 5:" />
-                <small>fafafaefeaafa</small>
+                <input type="number" name="number" id="input__number" placeholder="Ingresa un numero del 1 al 6:" min="1" max="6" />
+                <small></small>
               </div>
             </div>
             <button type="submit" id="button__submit">Enviar</button>
@@ -27,13 +27,7 @@
         </div>
         <div class="line-separator"></div>
       </div>
-      <div class="renders__containers" id="cards__renders--containers">
-        <div class="render__succes">
-          <!-- RENDER -->
-          <h2><!-- Nombre de la pizza --></h2>
-          <h3><!-- El precio de la pizza con el id que coincida en el numero ingresado en el input --></h3>
-        </div>
-      </div>
+      <div class="renders__containers" id="cards__renders--containers"></div>
     </main>
     <script src="./assets/utils.js"></script>
     <script src="./assets/validation.js"></script>
