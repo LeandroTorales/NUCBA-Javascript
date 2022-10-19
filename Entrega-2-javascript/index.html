@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Entrega 2 Javascript</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="container__flex">
+        <div class="container__formYText__dimension">
+          <div class="container__text">
+            <h1>Entrega 2 javascript:</h1>
+            <p>Ingresa el ID de una pizza</p>
+          </div>
+          <form id="form" novalidate>
+            <div class="container__field">
+              <div class="form__field">
+                <input type="number" name="number" id="input__number" placeholder="Ingresa un numero del 1 al 6:" min="1" max="6" />
+                <small></small>
+              </div>
+            </div>
+            <button type="submit" id="button__submit">Enviar</button>
+          </form>
+        </div>
+        <div class="line-separator"></div>
+      </div>
+      <div class="renders__containers" id="cards__renders--containers"></div>
+    </main>
+    <script src="./assets/utils.js"></script>
+    <script src="./assets/validation.js"></script>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
