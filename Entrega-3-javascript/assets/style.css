@@ -13,7 +13,7 @@
   --font-color-white: white;
   --background-color-button: rgb(132, 69, 151);
   --text-shadow: 4px 5px 5px black;
-  --background-color-card: rgb(91, 165, 122);
+  --background-color-card: rgb(168, 163, 92);
 }
 
 html {
@@ -136,6 +136,7 @@ h2 {
 
 .icon__error {
   font-size: 80px;
+  color: rgb(206, 0, 0);
 }
 
 .container__pizza h3,
