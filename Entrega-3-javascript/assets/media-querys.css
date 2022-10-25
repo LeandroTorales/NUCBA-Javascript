@@ -2,12 +2,6 @@
   #section__form--dimesions {
     height: 40vh;
   }
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 20px;
-  }
   .container__input {
     height: 40%;
     width: 30%;
@@ -21,7 +15,7 @@
     font-size: 25px;
   }
   #form__button {
-    font-size: 15px;
+    font-size: 13px;
     padding: 5px 25px;
   }
   #section__results {
@@ -35,7 +29,7 @@
     font-size: 18px;
   }
   .img__pizza--card {
-    height: 300px;
+    height: 280px;
   }
 }
 @media (max-width: 1050px) {
@@ -44,7 +38,7 @@
   }
 }
 
-@media (max-width: 695px) {
+@media (max-width: 960px) {
   h1 {
     font-size: 20px;
   }
