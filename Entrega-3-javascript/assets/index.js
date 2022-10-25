@@ -3,6 +3,7 @@ const form = document.getElementById("form");
 const input = document.getElementById("form__input");
 const inputValue = input.value;
 
+/* Array de la pizzas*/
 const pizzasArray = [
   {
     id: 1,
@@ -48,24 +49,28 @@ const pizzasArray = [
   },
 ];
 
+/* Guardado y llamado del localStorage */
 let pizzas = JSON.parse(localStorage.getItem("pizzas")) || [];
 const saveLocalStorage = () => {
   localStorage.setItem("pizzas", JSON.stringify(pizzas));
 };
 
+/* Funcion para encontrar al objeto en el input */
 const findPizza = (value) => pizzasArray.find((pizza) => pizza.id == value);
 
-const saveData = () => {
-  findPizza(inputValue);
+/* Modelo de dato */
+const saveData = (pizza) => {
   pizzas = [
     {
-      id: findPizza.id,
-      nombre: findPizza.nombre,
-      precio: findPizza.precio,
+      id: pizza.id,
+      nombre: pizza.nombre,
+      precio: pizza.precio,
+      imagen: pizza.imagen,
     },
   ];
 };
 
+/* Error si esta vacio el input */
 const errorIsEmpty = () => {
   sectionResults.innerHTML = `
     <div class="container__pizza">
@@ -75,6 +80,7 @@ const errorIsEmpty = () => {
     `;
 };
 
+/* Error si es invalido el input */
 const pizzaIdInvalid = () => {
   sectionResults.innerHTML = `
       <div class="container__pizza">
@@ -84,6 +90,7 @@ const pizzaIdInvalid = () => {
     `;
 };
 
+/* Render Success */
 const renderPizzaContainer = (pizza) => {
   return ` <div class="container__pizza">
         <h3 class="result__title">ID: ${pizza.id} <br> NOMBRE: ${pizza.nombre}</h3>
@@ -93,10 +100,12 @@ const renderPizzaContainer = (pizza) => {
   `;
 };
 
+/* Funcion para renderizar el contenido success obteniendo los datos del localStorage */
 const renderPizza = () => {
   sectionResults.innerHTML = pizzas.map(renderPizzaContainer);
 };
 
+/* Funcion del submit para evaluar cada situacion del input, si es correcto, se guarda en localStorage y se renderiza */
 const submitPizza = (e) => {
   e.preventDefault();
   const inputValue = input.value;
@@ -109,16 +118,19 @@ const submitPizza = (e) => {
     pizzaIdInvalid();
     form.reset();
     return;
+  } else {
+    saveData(pizzaBuscada);
+    saveLocalStorage();
+    renderPizza();
+    /* renderPizzaContainer(pizzaBuscada); */
+    form.reset();
   }
-  saveData();
-  saveLocalStorage();
-  renderPizza();
-  /* renderPizzaContainer(pizzaBuscada); */
-  form.reset();
 };
 
+/* Funcion inicializadora */
 const init = () => {
   form.addEventListener("submit", submitPizza);
+  window.addEventListener("DOMContentLoaded", renderPizza());
 };
 
 init();
