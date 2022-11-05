@@ -12,6 +12,7 @@
   --backround-color-input: #1f4f58;
   --backround-color-results: #205963;
   --backround-color-button: #9127a3;
+  --border-error: #ff0000;
 }
 html {
   scroll-behavior: smooth;
@@ -84,12 +85,20 @@ body {
 .form__field label {
   font-size: 25px;
   font-weight: 300;
+  margin-top: 5px;
 }
 
+.error {
+  border: 4px solid var(--border-error);
+}
 /* estilo mensaje error */
 small {
-  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
   color: rgb(236, 24, 24);
+  margin-bottom: 5px;
+  text-align: center;
 }
 
 /* Input estilos */
