@@ -1,0 +1,97 @@
+@media screen and (max-width: 794px) {
+  .container__form {
+    width: 70%;
+  }
+  .form__field label {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .container__form {
+    width: 70%;
+  }
+  .form__field label {
+    font-size: 20px;
+  }
+  #input {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .container {
+    font-size: 26px;
+  }
+  .container__form {
+    height: 116px;
+    width: 85%;
+  }
+  .form__field label {
+    font-size: 20px;
+  }
+  #input {
+    font-size: 18px;
+  }
+  #button {
+    font-size: 16px;
+  }
+  .container__result {
+    flex-direction: column;
+  }
+  .container__card {
+    margin: 4px 0px;
+  }
+  .img__pokemon {
+    width: 100px;
+    height: 80px;
+    padding-top: 2px;
+  }
+  .success {
+    border: 3px solid var(--backround-color-input);
+  }
+  .container__card h2 {
+    font-size: 25px;
+  }
+  .type__pokemon {
+    font-size: 16px;
+    padding: 11px 20px;
+    border-radius: 10px;
+  }
+  .weight__pokemon,
+  .height__pokemon {
+    font-size: 16px;
+  }
+  .exp__pokemon,
+  .id__pokemon {
+    font-size: 20px;
+  }
+}
+@media screen and (max-height: 794px) {
+  .section {
+    height: 19vh;
+  }
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #form {
+    flex-direction: row;
+    gap: 25px;
+  }
+  .container__form {
+    width: 50%;
+  }
+}
+@media screen and (max-height: 674px) {
+  .container {
+    padding-bottom: 5px;
+  }
+  .form__field {
+    gap: 5px;
+  }
+  .form__field label {
+    font-size: 16px;
+  }
+  #input {
+    font-size: 15px;
+  }
+}
