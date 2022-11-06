@@ -53,6 +53,7 @@ body {
 .container h3 {
   font-size: 25px;
   font-weight: 600;
+  text-shadow: black 3px 3px 1px;
 }
 
 #form {
@@ -71,6 +72,7 @@ body {
 }
 /* Dimensiones del campo de form */
 .form__field {
+  text-shadow: black 3px 1px 1px;
   width: 100%;
   background-color: var(--backround-color-results);
   border: 4px solid var(--backround-color-input);
@@ -144,27 +146,37 @@ small {
   flex-wrap: wrap;
   width: 100%;
   height: fit-content;
+  margin-top: 25px;
 }
 
 /* Card pokemon */
 .container__card {
+  padding: 5px 5px;
+  border-radius: 15px;
   margin: 15px 10px;
   min-width: 200px;
   max-width: 275px;
   height: auto;
   background-color: var(--backround-color-results);
   gap: 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 /* Dimensiones de imagen de la card pokemon */
 .img__pokemon {
-  width: 90%;
-  height: auto;
+  width: 275px;
+  height: 200px;
   padding-top: 10px;
 }
 
 .container__card h2 {
   font-size: 30px;
+}
+.container__card h2::first-letter {
+  text-transform: uppercase;
 }
 
 /* Dimensiones de la exp y el id de la card */
@@ -195,7 +207,9 @@ small {
 }
 
 .type__pokemon {
-  padding: 15px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 17px 25px;
   border-radius: 15px;
 }
 
@@ -253,4 +267,22 @@ small {
 }
 .fairy {
   background-color: #f0b6bc;
+}
+
+.icon__error {
+  font-size: 65px;
+
+  color: rgb(255, 255, 41);
+}
+.title__error {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(212, 3, 3);
+  font-weight: 800;
+  text-decoration: underline;
+  text-shadow: black 3px 1px 1px;
+}
+
+.success {
+  border: 5px solid var(--backround-color-input);
 }
