@@ -66,7 +66,7 @@ let pokemones = JSON.parse(localStorage.getItem("pokemones")) || [];
 /* Modelo de dato */
 const saveData = (poke) => {
   console.log(poke);
-  pokemones = [poke];
+  pokemones = [...poke];
 };
 
 /* Renders */
@@ -91,9 +91,9 @@ const renderPokemonContainer = (poke) => {
   console.log(poke);
   return `
   <div class="container__card success">
-        <img src="${poke.img}" alt="${poke.name}" class="img__pokemon" />
+  <img src="${poke.img}" width="200px" alt="${poke.name}" class="img__pokemon" />
         <h2>${poke.name}</h2>
-        <p class="weight__pokemon">Weight: ${poke.level}</p>
+        <p class="weight__pokemon"> ${poke.level}</p>
   </div> 
       `;
 };
@@ -106,7 +106,7 @@ const renderPokemon = () => {
 const submitPokemon = async (e) => {
   e.preventDefault();
 
-  const dataPoke = await fetchPokemon("koromon");
+  const dataPoke = await fetchPokemon("patamon");
   console.log(dataPoke);
   saveData(dataPoke);
   saveLocalStorage();
