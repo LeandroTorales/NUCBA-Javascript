@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+:root {
+  --color-font: white;
+  --backround-color-form-container: #4c4c4c;
+  --backround-color-input: #1f4f58;
+  --backround-color-results: #205963;
+  --backround-color-button: #9127a3;
+  --border-error: #ff0000;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+}
+
+.section {
+  height: 25vh;
+}
+
+/* Display flex a diferentes containers */
+.section,
+#form,
+.form__field,
+.container,
+.container__result,
+.container__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container superior */
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--backround-color-form-container);
+  color: var(--color-font);
+  font-size: 35px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.container h3 {
+  font-size: 25px;
+  font-weight: 600;
+  text-shadow: black 3px 3px 1px;
+}
+
+#form {
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+}
+
+.container__form {
+  height: 175px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+/* Dimensiones del campo de form */
+.form__field {
+  text-shadow: black 3px 1px 1px;
+  width: 100%;
+  background-color: var(--backround-color-results);
+  border: 4px solid var(--backround-color-input);
+  gap: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.form__field label {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+
+.error {
+  border: 4px solid var(--border-error);
+}
+/* estilo mensaje error */
+small {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgb(236, 24, 24);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+/* Input estilos */
+#input {
+  color: var(--color-font);
+  background-color: var(--backround-color-input);
+  border: 3px solid white;
+  font-size: 25px;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Button estilos */
+#button {
+  margin-top: 4px;
+  font-size: 20px;
+  background-color: var(--backround-color-button);
+  padding: 3px 50px;
+  color: var(--color-font);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Linea divisoria */
+.line__divider {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+/* Container de los resultados de la api */
+.container__result {
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  margin-top: 25px;
+}
+
+/* Card pokemon */
+.container__card {
+  padding: 5px 5px;
+  border-radius: 15px;
+  margin: 15px 10px;
+  min-width: 200px;
+  max-width: 275px;
+  height: auto;
+  background-color: var(--backround-color-results);
+  gap: 10px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Dimensiones de imagen de la card pokemon */
+.img__pokemon {
+  width: 275px;
+  height: 200px;
+  padding-top: 10px;
+}
+
+.container__card h2 {
+  font-size: 30px;
+}
+.container__card h2::first-letter {
+  text-transform: uppercase;
+}
+
+/* Dimensiones de la exp y el id de la card */
+.container__expYid-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.exp__pokemon,
+.id__pokemon {
+  font-size: 23px;
+}
+.weight__pokemon,
+.height__pokemon {
+  font-size: 20px;
+}
+
+/* Dimensiones del tipo pokemon de la card */
+.container__pokemon-type {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.type__pokemon {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 17px 25px;
+  border-radius: 15px;
+}
+
+/* Backround color de los tipos de pokemones */
+.normal {
+  background-color: #a8a878;
+}
+.fire {
+  background-color: #f08030;
+}
+.water {
+  background-color: #6890f0;
+}
+.grass {
+  background-color: #78c850;
+}
+.electric {
+  background-color: #f8d030;
+}
+.ice {
+  background-color: #98d8d8;
+}
+.fighting {
+  background-color: #c03028;
+}
+.poison {
+  background-color: #a040a0;
+}
+.ground {
+  background-color: #e0c068;
+}
+.flying {
+  background-color: #a890f0;
+}
+.psychic {
+  background-color: #f85888;
+}
+.bug {
+  background-color: #a8b820;
+}
+.rock {
+  background-color: #b8a038;
+}
+.ghost {
+  background-color: #705898;
+}
+.dark {
+  background-color: #705848;
+}
+.dragon {
+  background-color: #7038f8;
+}
+.steel {
+  background-color: #b8b8d0;
+}
+.fairy {
+  background-color: #f0b6bc;
+}
+
+.icon__error {
+  font-size: 65px;
+
+  color: rgb(255, 255, 41);
+}
+.title__error {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(212, 3, 3);
+  font-weight: 800;
+  text-decoration: underline;
+  text-shadow: black 3px 1px 1px;
+}
+
+.success {
+  border: 5px solid var(--backround-color-input);
+}
