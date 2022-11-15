@@ -1,3 +1,30 @@
+class persona {
+  constructor(nombre, edad, nacionalidad, saludo) {
+    this.nombre = nombre;
+    this.edad = edad;
+    this.nacionalidad = nacionalidad;
+    const saludooo = function () {
+      return `Hola, me llamo ${this.nombre}`;
+    };
+    this.saludar = saludooo;
+  }
+}
+class persona3 extends persona {
+  super(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+}
+const personitttaaa = new persona("elisa", 39, "bolivia");
+const personita = new persona3("Juan", 28, "Argentina");
+persona3.prototype.nacionalidad = function () {
+  return `Mi nacionalidad es ${this.nacionalidad}`;
+};
+console.log(personitttaaa);
+console.log(personita);
+console.log(personita.saludar());
+console.log(personita.nacionalidad);
+
 const form = document.getElementById("form");
 const containerResults = document.querySelector(".container__result");
 const inputNumber = document.getElementById("input");
